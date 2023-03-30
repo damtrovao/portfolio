@@ -1,0 +1,84 @@
+@bg-color: rgb(56, 56, 165);
+@bg-color2: rgb(31, 31, 139);
+
+body {
+    
+    justify-content: center;
+}
+.header-title {
+    color: white;
+    display: inline;
+    background-color: @bg-color;
+}
+
+.nav {
+    font: normal 14px sans-serif;
+}
+
+.nav {
+    border-radius: 7px;
+    height: 37px;
+    background-color: @bg-color;
+    position: relative;
+    width: auto;
+    z-index: 500;
+}
+
+.nav .table {
+    display: table;
+    margin: 0 auto;
+}
+.nav .table .row {
+    display: table-row;
+}
+
+.nav .select {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-cell;
+    white-space: nowrap;
+}
+
+.nav .select a {
+    display: block;
+    height: 35px;
+    float: left;
+    background-color: @bg-color;
+    padding: 0 30px 0 30px;
+    text-decoration: none;
+    line-height: 35px;
+    white-space: nowrap;
+    color: #ddd;
+}
+
+.nav .select a:hover {
+    background-color: @bg-color2;
+    border: solid #ddd 1px;
+    border-radius: 7px;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    float: left;
+}
+
+div {
+    display: block;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+}

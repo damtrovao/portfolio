@@ -1,0 +1,39 @@
+<div class="relogio">
+    <div>
+        <p>{{ currentDate | date: "HH:mm:ss"}}</p>
+    </div>
+</div>
+
+<hr>
+
+<div class="cronometro">
+    <div>
+        <h3>Cronômetro</h3>
+    </div>
+    <div class="mostradores">
+        <div>
+            <p>Tempo total</p>
+            <p>{{telaMinutes | number: '2.0-0'}}:{{telaSeconds | number: '2.0-0'}}:{{telaMilli | number: '2.0-0'}}</p>
+        </div>
+    
+        <div class="lap-atual">
+            <p>{{lapMinuteVal | number: '2.0-0'}}:{{lapSecondVal | number: '2.0-0'}}:{{lapMillisVal | number: '2.0-0'}}</p>
+        </div>
+    </div>
+    <div class="laps-box">
+        <div class="laps" *ngFor="let lap of laps; index as i; count as c">
+            <div class="lap-label">
+                <label>Lap {{c - i}}</label>
+            </div>
+            <div  class="lap-data">
+                <p>{{lap}}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="stopwatchStart()">Start</button>
+        <button (click)="stopwatchPause()">Pause</button>
+        <button (click)="stopwatchLap()">Lap</button>
+        <button (click)="stopwatchReset()">Reset</button>
+    </div>
+</div>

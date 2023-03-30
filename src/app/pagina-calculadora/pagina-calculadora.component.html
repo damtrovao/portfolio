@@ -1,0 +1,40 @@
+<div class="tela">
+    <div class="corpo-calculadora">
+        <div class="calculadora">
+            <div class="tela-calculadora">
+                <p>{{telaLinha1}}</p>
+                <p>{{telaLinha2}}</p>
+            </div>
+            <div class="teclado-calculadora">
+                <div>
+                    <div class="area-um">
+                        <button (click)="resetCalculadora()">AC</button>
+                        <button id="botao-backspace" (click)="apagarNumeroNaTela()"><-</button>   
+                    </div>
+                
+                    <div class="area-dois">
+                        <button (click)="montarTela('7')">7</button>
+                        <button (click)="montarTela('8')">8</button>
+                        <button (click)="montarTela('9')">9</button>
+                        <button (click)="montarTela('4')">4</button>
+                        <button (click)="montarTela('5')">5</button>
+                        <button (click)="montarTela('6')">6</button>
+                        <button (click)="montarTela('1')">1</button>
+                        <button (click)="montarTela('2')">2</button>
+                        <button (click)="montarTela('3')">3</button>
+                        <button id="botao-zero" (click)="montarTela('0')">0</button>
+                        <button (click)="montarTela('.')">.</button>
+                    </div>  
+                </div>
+                <div class="area-tres">
+                    <button (click)="montarTela('/')">/</button>
+                    <button (click)="montarTela('*')">*</button>
+                    <button (click)="montarTela('-')">-</button>
+                    <button (click)="montarTela('+')">+</button>        
+                    <button (click)="botaoIgual()">=</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="tela">
+    <div class="tabuleiro">
+        <div class="linha-um">
+            <p (click)="selecionado(0)">{{tabuleiro[0]}}</p>
+            <p (click)="selecionado(1)">{{tabuleiro[1]}}</p>
+            <p id="linha-um-direita" (click)="selecionado(2)">{{tabuleiro[2]}}</p>
+        </div>
+        <div class="linha-dois">
+            <p (click)="selecionado(3)">{{tabuleiro[3]}}</p>
+            <p (click)="selecionado(4)">{{tabuleiro[4]}}</p>
+            <p id="linha-dois-direita" (click)="selecionado(5)">{{tabuleiro[5]}}</p>
+        </div>
+        <div class="linha-tres">
+            <p (click)="selecionado(6)">{{tabuleiro[6]}}</p>
+            <p (click)="selecionado(7)">{{tabuleiro[7]}}</p>
+            <p id="linha-tres-direita" (click)="selecionado(8)">{{tabuleiro[8]}}</p>
+        </div>
+    </div>
+    <div>
+        <h3>Jogador da vez</h3>
+        <p>{{pecaInicial}}</p>
+    </div>
+    <div>
+        <button (click)="resetTabuleiro()">Reset</button>
+    </div>
+</div>

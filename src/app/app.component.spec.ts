@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('site-portfolio app is running!');
+    expect(compiled.querySelector('.header-title')?.textContent).toContain('Portfólio Daniel Gregini Trovão');
   });
 });

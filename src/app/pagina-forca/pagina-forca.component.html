@@ -1,0 +1,21 @@
+<div class="tentativas">
+    <div *ngFor="let letra of letrasCertas">
+        <p>{{letra}}</p>
+    </div>
+</div>
+<div class="palavra-secreta" [ngClass]="flagInicio ? 'palavra-secreta-hide' : ''">
+    <input #palavra type="password" placeholder="Digite uma palavra">
+    <button (click)="comecarJogo(palavra.value)">Iniciar</button>
+</div>
+<div>
+    <input [(ngModel)]="letra">
+    <button (click)="verificarLetra(letra)" >Verificar letra</button>
+</div>
+<div>
+    <button (click)="resetJogo()" (click)="palavra.value = ''">Reset</button>
+</div>
+<div class="tentativas">
+    <div *ngFor="let letra of erros">
+        <p>{{letra}}</p>
+    </div>
+</div>
